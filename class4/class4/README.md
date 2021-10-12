@@ -76,6 +76,57 @@ export default function Welcome (props) {
 }
 ```
 
+
+```javascript
+import React from 'react';
+
+export default function Welcome ({name}) {
+    return(
+        <div>
+            <h1>Hello {name}</h1>
+        </div>
+    )
+}
+```
+
+### Componentes de presentacion 
+
+Son aquellos que simplemente se limitan a mostrar datos y tienen poca o nula lógica asociada a manipulación del estado (por eso son también llamados stateless components). Como por ejemplo un componente que muestre una carta de un producto con toda su información.
+
+### Componentes Contenedores
+
+Tienen como propósito encapsular a otros componentes y proporcionarles las propiedades que necesitan. Además se encargan de modificar el estado de la aplicación para que el usuario vea el cambio en los datos (por eso son también llamados state components). Esto quiere decir que son los que se encargaran de llamar los datos en nuestra Base de Datos en firebase de tal forma de renderizar todos los productos con el componente del ejemplo pasado
+
+
+
+```javascript
+import React from 'react';
+import CardProduct from '../components/CardProduct' // Ejemplo, este archivo no esta dentro del proyecto
+
+export default function ListProducts() {
+  
+  // esto serian los productos en nuestra base de datos
+  
+  const products = [
+  {
+    title: "nombre del producto"
+  }, 
+  {
+    title: "nombre del producto 2"
+  }
+  ]
+  
+    return(
+        <div>
+            {/* La forma en la que se recorre el array y hacer el render del componente CardProduct */}
+            {products?.map((product) => (
+             <CardProducto title={product?.title} />
+            ))}
+        </div>
+    )
+}
+```
+
 ## Documentacion de las tecnologias usadas
 
  - [ReactJS](https://es.reactjs.org/)
