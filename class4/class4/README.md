@@ -14,34 +14,6 @@ En esta clase vamos a estudiar los tipos de componentes que existen, como usarlo
 Si necesitan algún soporte para la instalación de estas tecnologías al final se adjuntara la documentación de cada una de ellas y cualquier duda pueden preguntar al docente sobre la configuración del proyecto para agilizar la instalación del mismo.
 ###
 
-
-## Clonar el proyecto y como usarlo
-
-Clonando el repositorio tendrán acceso al código OJO ( Eliminar la carpeta de git para que no realicen cambios al proyecto original en github)
-o en su defecto cambiar el remote del repositorio. Cualquier duda consultar al docente.
-```bash
-git clone https://github.com/wnox97/coderHouse.git
-```
-
-Irse a la carpeta del proyecto
-
-```bash
-  cd my-project
-```
-
-
-Con este comando estaremos instalando todas las dependencias necesarias que requiere nuestro proyecto en react
-```bash
-npm install || npm i
-```
-
-
-Iniciar el proyecto
-```bash
-  npm start
-```
-##
-
 # Teoria de la clase
 
 ## Class Components
