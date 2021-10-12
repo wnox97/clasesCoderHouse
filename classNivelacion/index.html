@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Título de la WEB</title>
+  <meta charset="UTF-8" />
+  <meta name="title" content="Título de la WEB" />
+  <meta name="description" content="Descripción de la WEB" />
+  <link href="./styles.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .titulo {
+      color: green;
+    }
+
+    .new-class {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+  </style>
+</head>
+<!-- Explicar varias etiquetas emmet, semántica, cheat sheet semántica -->
+
+<body>
+  <header>
+    <h1 class="titulo">Título de la WEB</h1>
+  </header>
+  <nav>
+    <a href="http://dominio.com/seccion2.html">IR SECCIÓN 2</a>
+    <a href="http://dominio.com/seccion2.html">IR SECCIÓN 3</a>
+  </nav>
+  <section style="margin-left: auto; margin-right:auto; display:flex; flex-direction:row; padding:20px; margin-top:10px; justify-content:center; align-items:center;">
+  
+    <!-- Centrar elementos -->
+    <article class="card">
+      <div style="display:flex; flex-direction:column;">
+        <div class="card-title">
+          <h3 class="card-title-text" style="text-align:center;">Titulo de la carta</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-body-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sequi perspiciatis
+            repudiandae tempora nesciunt quibusdam quo sit magnam cum, officia ipsam commodi aperiam nostrum alias enim
+            pariatur
+            neque sunt atque?</p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <aside>
+    <h3>Banner de publicidad</h3>
+    <a href="http://dominio-externo.com">
+      <img src="http://dominio.com/banner-publicidad.png" alt="banner de publicidad" />
+    </a>
+    <h3>Testimonios</h3>
+    <p>Me gusta mucho esta página.</p>
+  </aside>
+  <footer>
+    <h4>Avisos legales</h4>
+    <a href="http://dominio.com/aviso-legal">Política de cookies</a>
+    <h4>Redes sociales</h4>
+    <a href="http://facebook.com/mi-pagina-de-facebook">Mi Facebook</a>
+  </footer>
+
+  <script type="text/javascript">
+      // Otra forma de insertar codigo javascript en nuestro archivo HTML
+
+
+  </script>
+  <script type="text/javascript" src="./script.js" />
+</body>
+
+</html>
