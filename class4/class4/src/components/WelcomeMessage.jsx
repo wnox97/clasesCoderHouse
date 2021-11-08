@@ -16,7 +16,7 @@ export default function WelcomeMessage({ name, description }) {
         </div>
         <div className="w-full lg:w-1/2 flex flex-col flex-wrap lg:pr-10">
           <h1 className="text-4xl lg:text-7xl font-semibold text-white">
-            Bienvenidos al curso de React - Clase 4
+            Bienvenidos al curso de React - Clase 9-10
             <br />
           </h1>
           <h2 className="text-white text-xl mt-4 font-semibold">{name}</h2>

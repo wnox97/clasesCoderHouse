@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 Wave.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   color: PropTypes.string,
 };
 
@@ -11,7 +11,7 @@ export default function Wave({ className, color }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
-      className={`${className}`}
+      className={`${className ?? ''}`}
     >
       <path
         fill={`${color ?? '#0099ff'}`}

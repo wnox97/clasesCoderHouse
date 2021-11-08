@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({setCartOpen}) {
   return (
     <nav className="w-full flex items-center justify-between flex-wrap bg-indigo-900 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -29,18 +32,20 @@ export default function Navbar() {
       </div>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow">
-          <a
-            href="#responsive-header"
+          <Link to="/">
+          <p
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
           >
-            Docs
-          </a>
-          <a
-            href="#responsive-header"
+            Home
+          </p>
+          </Link>
+          <Link to="/products">
+          <p
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
           >
-            Examples
-          </a>
+            Products
+          </p>
+          </Link>
           <a
             href="#responsive-header"
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
@@ -49,12 +54,16 @@ export default function Navbar() {
           </a>
         </div>
         <div>
-          <a
-            href="#"
-            className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+          <button
+            className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white mt-4 lg:mt-0"
+            onClick={(e) => {
+              e.preventDefault();
+              setCartOpen(true);
+            }}
+            type="button"
           >
-            Download
-          </a>
+            Shopping Cart
+          </button>
         </div>
       </div>
     </nav>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,8 +7,6 @@ ExampleMovieCard.propTypes = {
 };
 
 export default function ExampleMovieCard({ movies }) {
-  console.table(movies);
-
   return (
     <>
     <div className="w-full justify-items-center items-center mx-auto mt-20 mb-20">
