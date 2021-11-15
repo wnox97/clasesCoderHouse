@@ -8,6 +8,7 @@ export default function AppContextProvider({
 }) {
   const [darkMode, setDarkMode] = React.useState(false);
   const [products, setProducts] = React.useState([]);
+  
   return (
     <AppContext.Provider value={{ 
         darkMode, 

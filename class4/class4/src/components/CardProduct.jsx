@@ -1,9 +1,10 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
 
-export default function CardProduct({title, description, price, id , img, onClick}){
+function CardProduct({title, description, price, id , img, onClick}){
     const product = {
         title, 
         description,
@@ -64,6 +65,12 @@ export default function CardProduct({title, description, price, id , img, onClic
 </div>
 )
 }
+
+// Example about memo dont have to use memo in this component
+
+export default React.memo(CardProduct, (prevProps, nextProps) => {
+  prevProps?.title === nextProps?.title
+})
 
 CardProduct.propTypes = {
     title: PropTypes?.string,

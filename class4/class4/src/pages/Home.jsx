@@ -19,7 +19,6 @@ export default function Home() {
           price: '',
         },
       ];
-    
       const description =
         'En esta clase le vamos a dedicar tiempo a repasar lo que es el routing, eventos y como usarlos en nuestra aplicación y como mantener nuestros valores de nuestra app evitando el nesting props de cada uno de los componentes';
     return(
