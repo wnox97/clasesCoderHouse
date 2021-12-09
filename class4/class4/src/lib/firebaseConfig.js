@@ -2,7 +2,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // Version nueva de firebase 9.4
-import { getFirestore } from "firebase/firestore";
+import { collection, getFirestore } from "firebase/firestore";
 import 'firebase/compat/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,7 +26,12 @@ const getFirestoreDb = () => {
     return getFirestore(app);
 }
 
+const getCollection = (db, path) => {
+  return collection(db, path);
+}
+
 export {
     app,
     getFirestoreDb,
+    getCollection,
 }

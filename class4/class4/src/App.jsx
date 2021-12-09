@@ -1,26 +1,25 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
+import AppContextProvider from './context/AppContext';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
-import AppContextProvider from './context/AppContext';
+import Cart from './pages/Cart';
 import './App.css';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const ThemeContext = React.createContext(false);
-    return (
+return (
  <AppContextProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/products" element={<Products />}/>
         <Route path="/products/:id" element={<ProductDetail />}/>
+        <Route path="/cart" element={<Cart />}/>
       </Routes>
     </BrowserRouter>
   </AppContextProvider>

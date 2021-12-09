@@ -10,7 +10,8 @@ function CardProduct({title, description, price, id , img, onClick}){
         description,
         price,
         id,
-        img
+        img,
+        quantity:1,
     };
     return(
         <div className="py-6">

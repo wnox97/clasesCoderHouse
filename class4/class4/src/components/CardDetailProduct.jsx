@@ -3,13 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useProducts } from '../hooks/useProducts';
 
-export default function CardDetailProduct({title, description, price, img}){
+export default function CardDetailProduct({title, description, price, img, id}){
     const [products, setProducts] = useProducts();
     const product = {
         title,
         description,
         price,
-        img
+        img,
+        quantity: 1,
     };
     return(
         <section className="text-gray-700 body-font w-full overflow-hidden bg-white">
@@ -111,4 +112,5 @@ CardDetailProduct.propTypes = {
     description: PropTypes.string,
     price: PropTypes.number,
     img: PropTypes.string,
+    id: PropTypes.string,
 }
